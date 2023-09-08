@@ -4,8 +4,8 @@ from store.models import Book
 
 
 @admin.register(Book)
-class PostAdmin(admin.ModelAdmin):
-    list_display = ("name", "price")
-    fields = ("name", "price")
+class BookAdmin(admin.ModelAdmin):
+    list_display = ("name", "author_name", "price")
+    fields = ("name", "author_name", "price")
     search_fields = ("name",)
     ordering = ("name",)
